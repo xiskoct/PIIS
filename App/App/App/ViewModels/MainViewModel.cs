@@ -12,10 +12,10 @@ namespace App.ViewModels
         public MainViewModel()
         {
             LoadMenu();
-            LoadData();
+            //LoadData();
         }
 
-    
+
 
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
         public ObservableCollection<OrderViewModel> Orders { get; set; }
@@ -24,7 +24,7 @@ namespace App.ViewModels
         {
             Menu = new ObservableCollection<MenuItemViewModel>();
             Menu.Add(new MenuItemViewModel()
-            { 
+            {
                 Icon = "ic_action_orders",
                 Title = "Pedidos",
                 PageName = "NewOrderPage"
@@ -41,7 +41,10 @@ namespace App.ViewModels
                 Title = "Alarmas",
                 PageName = "AlarmsPage"
             });
-
+        }
+    }
+}
+            /*
 
         }
         private void LoadData()
@@ -57,6 +60,6 @@ namespace App.ViewModels
 
             }
         }
+        */
+    
 
-    }
-}
