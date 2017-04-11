@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.Pages.MainPage"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             Title="Mis Pedidos"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+  <ListView
+    ItemsSource="{Binding Orders}"
+    HasUnevenRows="True">
+  <ListView.ItemTemplate>
+    <DataTemplate>
+      <ViewCell>
+        <Grid>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"> </ColumnDefinition>
+            <ColumnDefinition Width="*"> </ColumnDefinition>
+          </Grid.ColumnDefinitions>
+          
+          <Image
+            WidthRequest="50"
+            HeightRequest="50"
+            VerticalOptions="Start"
+            Source="icon.png">
+          </Image>
+          
+          
+          <StackLayout>
+            <Label
+              VerticalOptions="Center"
+              TextColor="{StaticResource FontColor}"
+              Text="{Binding Title}">
+            </Label>
+            
+          <Label
+           VerticalOptions="Center"
+            TextColor="{StaticResource FontColor}"
+            Text="{Binding Description}">
+          </Label>
+
+          <Label
+           VerticalOptions="Center"
+           TextColor="{StaticResource FontColor}"
+           Text="{Binding DeliveryDate, StringFormat= 'yyyy/MM/dd'}">
+          </Label>
+
+          </StackLayout>
+          
+        </Grid>
+      </ViewCell>
+    </DataTemplate>
+  </ListView.ItemTemplate>
+  </ListView>
+  
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Icon="ic_action_add.png">
+    </ToolbarItem>
+  </ContentPage.ToolbarItems>
+</ContentPage>

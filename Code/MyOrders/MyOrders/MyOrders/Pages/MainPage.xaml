@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyOrders.Pages.MainPage"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             Title="Mis Pedidos"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+  <ListView
+    ItemTemplate="{StaticResource OrderItemTemplate}"
+    ItemsSource="{Binding Orders}"
+    HasUnevenRows="True">
+  </ListView>
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Icon="ic_action_add.png" Command="{Binding GoToCommand}" CommandParameter="NewOrderPage">
+    </ToolbarItem>
+  </ContentPage.ToolbarItems>
+</ContentPage>
