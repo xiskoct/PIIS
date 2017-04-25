@@ -11,7 +11,7 @@
   <ListView.ItemTemplate>
     <DataTemplate>
       <ViewCell>
-        <Grid>
+        <Grid Padding="8">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"> </ColumnDefinition>
             <ColumnDefinition Width="*"> </ColumnDefinition>
@@ -25,8 +25,9 @@
           </Image>
           
           
-          <StackLayout>
+          <StackLayout Grid.Column="1">
             <Label
+              FontAttributes="Bold"
               VerticalOptions="Center"
               TextColor="{StaticResource FontColor}"
               Text="{Binding Title}">
@@ -40,8 +41,8 @@
 
           <Label
            VerticalOptions="Center"
-           TextColor="{StaticResource FontColor}"
-           Text="{Binding DeliveryDate, StringFormat= 'yyyy/MM/dd'}">
+           TextColor="{StaticResource MainColor}"
+           Text="{Binding DeliveryDate, StringFormat= '{0:yyyy/MM/dd}'}">
           </Label>
 
           </StackLayout>
@@ -53,7 +54,7 @@
   </ListView>
   
   <ContentPage.ToolbarItems>
-    <ToolbarItem Icon="ic_action_add.png">
+    <ToolbarItem Icon="ic_action_add.png" Command="{Binding GoToCommand}" CommandParameter="NewOrderPage">
     </ToolbarItem>
   </ContentPage.ToolbarItems>
 </ContentPage>

@@ -18,6 +18,7 @@ namespace App.Pages
         protected override void OnAppearing() //En el momento que la pagina aparezca llevamos la clase App a 
         {
             base.OnAppearing();
+            App.Master = this;
             App.Navigator = this.Navigator;  //Referencia al NavigationPage de nuestro MasterPage 
         }
     }

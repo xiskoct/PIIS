@@ -10,13 +10,14 @@ namespace App
 {
     public partial class App : Application
     {
-        public static NavigationPage Navigator { get; internal set; } 
+        public static NavigationPage Navigator { get; internal set; }
+        public static MasterPage Master { get; internal set; }
 
         public App()
         {
             InitializeComponent();
          
-            MainPage = new MasterPage();
+            MainPage = new WelcomePage(); //Pagina Principal, Asignamos la de bienvenida
         }
 
         protected override void OnStart()

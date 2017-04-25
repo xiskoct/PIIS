@@ -14,6 +14,45 @@
       <!--Menu Colors-->
       <Color x:Key="MenuColor">#52656b</Color>
       <Color x:Key="MenuFontColor">#ffffff</Color>
+
+
+      <!--Fonts-->
+      <OnPlatform x:Key="GeneralButtonFont"
+                  x:TypeArguments="Font"
+                  iOS="12"
+                  Android="14"
+                  WinPhone="16" />
+      
+      
+      <!--Stilo-->
+      <Style x:Key="GeneralButton"
+              TargetType="Button">
+        <Setter Property="Font"
+                Value="{StaticResource GeneralButtonFont}">
+          
+        </Setter>
+        <Setter
+        Property="BorderRadius"
+        Value="20">
+          
+        </Setter>
+        <Setter
+        Property="HeightRequest"
+        Value="40">
+          
+        </Setter>
+        <Setter  Property="BackgroundColor"
+                  Value="{StaticResource MainColor}"></Setter>
+        <Setter
+        Property="TextColor"
+        Value="{StaticResource MenuFontColor}">
+          
+        </Setter>
+       
+      </Style>
+      
+      
+      
       <!--Locator-->
       <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
     </ResourceDictionary>
