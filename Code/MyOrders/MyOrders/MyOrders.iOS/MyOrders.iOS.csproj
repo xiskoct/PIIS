@@ -98,8 +98,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MyOrders\MyOrders.csproj">
-      <Name>MyOrders</Name>
+    <ProjectReference Include="..\MyOrders\AppSupermarket.csproj">
+      <Name>AppSupermarket</Name>
+      <Project>{F2B59D3A-3203-410E-8421-A3640DA02DD9}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

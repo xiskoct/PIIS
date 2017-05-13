@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrders.Droid", "MyOrders\MyOrders.Droid\MyOrders.Droid.csproj", "{8F67D63C-FA36-40C0-8AF3-65233BDB4E38}"
 EndProject
@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrders.UWP", "MyOrders\My
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrders.Windows", "MyOrders\MyOrders.Windows\MyOrders.Windows.csproj", "{DB7EB612-1555-412C-B3BD-4E35B1CCE629}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyOrders", "MyOrders\MyOrders\MyOrders.csproj", "{F2B59D3A-3203-410E-8421-A3640DA02DD9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSupermarket", "MyOrders\MyOrders\AppSupermarket.csproj", "{F2B59D3A-3203-410E-8421-A3640DA02DD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
