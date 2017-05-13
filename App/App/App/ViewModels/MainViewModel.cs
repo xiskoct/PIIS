@@ -14,11 +14,14 @@ namespace App.ViewModels
     public class MainViewModel
     {
         NavigationService navigationService; //Navegacion del main
+        ApiService apiService; //Llamo a Api para deserializar JSON
         public MainViewModel()
         {
             navigationService = new NavigationService();
+            apiService = new ApiService();
+
             LoadMenu();
-            LoadData();
+            //LoadData();
         }
 
 
@@ -47,15 +50,13 @@ namespace App.ViewModels
             get { return new RelayCommand(Start); }
         }
 
-        private void Start()
+        private async void Start()
         {
-           
+            var list = await apiService.GetAllOrders(); 
+
             navigationService.SetMainPage("MasterPage");
 
         }
-
-
-
 
         #region Methods
 
